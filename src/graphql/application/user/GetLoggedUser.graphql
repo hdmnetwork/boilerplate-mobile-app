@@ -1,0 +1,6 @@
+query GetLoggedUser {
+    getLoggedUser {
+        id
+        email
+    }
+}

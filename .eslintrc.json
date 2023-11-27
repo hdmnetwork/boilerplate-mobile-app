@@ -1,0 +1,81 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "plugin:cypress/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"]
+      }
+    }
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "func-names": "off",
+    "import/extensions": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/prefer-stateless-function": "off",
+    "max-len": ["error", { "code": 120 }],
+    "react/destructuring-assignment": ["off"],
+    "import/prefer-default-export": "off",
+    "react/no-did-update-set-state": "off",
+    "react/button-has-type": "off",
+    "no-unused-vars": "off",
+    "react/jsx-props-no-spreading": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "no-plusplus": "off",
+    "no-continue": "off",
+    "no-param-reassign": "off",
+    "no-shadow": "off",
+    "no-void": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "class-methods-use-this": "off",
+    "no-useless-constructor": "off",
+    "no-empty-function": "off",
+    "react/require-default-props": "off",
+    "func-style": ["warn", "declaration", { "allowArrowFunctions": true }],
+    "react/function-component-definition": [
+      "warn",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "no-unsafe-optional-chaining": "off",
+    "global-require": "off",
+    "import/no-dynamic-require": "off",
+    "react/style-prop-object": "off",
+    "react/react-in-jsx-scope": "off",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "always-multiline",
+        "imports": "always-multiline",
+        "objects": "always-multiline"
+      }
+    ],
+    "camelcase": "off"
+  },
+  "overrides": [
+    {
+      "files": ["**/__tests__/*"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
+}
